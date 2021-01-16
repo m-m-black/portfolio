@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://m-m-black.github.io/portfolio/",
+  "homepage": "https://m-m-black.github.io/portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
