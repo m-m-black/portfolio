@@ -1,0 +1,85 @@
+#root {
+	display: flex;
+	flex-flow: column;
+	height: 100vh;
+}
+
+.App {
+	text-align: center;
+}
+
+nav {
+	display: flex;
+	flex: 0 1 auto;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 15vh;
+	background: black;
+}
+
+.nav-header {
+	color: white;
+	/*width: 50%;*/
+	align-items: center;
+	margin: 0px;
+}
+
+.nav-links {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	margin: 0px;
+}
+
+.nav-links li {
+	color: white;
+}
+
+.content {
+	background: black;
+	flex: 1 1 auto;
+}
+
+.sketch-preview {
+	display: flex;
+	flex-flow: row;
+	background: black;
+	padding: 40px;
+}
+
+.sketch-preview .left {
+	text-align: left;
+	float: left;
+}
+
+.sketch-preview .right {
+	text-align: right;
+	float: right;
+}
+
+.sketch-text {
+	width: 50%;
+	justify-content: space-around;
+	align-items: center;
+	background: black;
+	color: white;
+}
+
+.sketch-desc {
+	width: 50%;
+}
+
+.sketch-img {
+	width: 50%;
+	background: black;
+	text-align: center;
+}
+
+img {
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: 5px 5px;
+}
