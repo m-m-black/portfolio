@@ -17,6 +17,20 @@ class Nav extends React.Component {
 					<Link to="/">
 						<li>Home</li>
 					</Link>
+					<a
+						href="https://github.com/m-m-black"
+						target="_black"
+						rel="noreferrer"
+					>
+						<li>GitHub</li>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/morgan-black-132b145a/"
+						target="_black"
+						rel="noreferrer"
+					>
+						<li>LinkedIn</li>
+					</a>
 				</ul>
 			</nav>
 		);

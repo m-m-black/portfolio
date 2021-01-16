@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Work+Sans:wght@100&display=swap');
+
+body {
+  font-family: "Comfortaa", sans-serif;
+}
+
 #root {
 	display: flex;
 	flex-flow: column;
@@ -82,4 +88,45 @@ img {
 	border-width: 1px;
 	border-style: solid;
 	box-shadow: 5px 5px;
+}
+
+.about-fragment {
+	width: 80%;
+	margin: auto;
+	padding: 40px;
+	color: white;
+}
+
+.about-left {
+	padding: 10px;
+	text-align: left;
+	width: 60%;
+	margin-right: auto;
+	/*border-style: solid none none solid;*/
+}
+
+.about-right {
+	padding: 10px;
+	text-align: right;
+	width: 60%;
+	margin-left: auto;
+	/*border-style: solid solid none none;*/
+}
+
+.about-left:before {
+	content: "";
+	display: block;
+	padding: 10px;
+	width: 50%;
+	margin-right: auto;
+	border-top: 2px solid white;
+}
+
+.about-right:before {
+	content: "";
+	display: block;
+	padding: 10px;
+	width: 50%;
+	margin-left: auto;
+	border-top: 2px solid white;
 }
