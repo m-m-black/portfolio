@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.5b115321.chunk.css",
+    "main.js": "/portfolio/static/js/main.d1eed028.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d1eed028.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/portfolio/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.d70904ca.chunk.js": "/portfolio/static/js/2.d70904ca.chunk.js",
+    "static/js/2.d70904ca.chunk.js.map": "/portfolio/static/js/2.d70904ca.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/portfolio/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.5b115321.chunk.css.map": "/portfolio/static/css/main.5b115321.chunk.css.map",
+    "static/js/2.d70904ca.chunk.js.LICENSE.txt": "/portfolio/static/js/2.d70904ca.chunk.js.LICENSE.txt",
+    "static/media/circles.16ab0f8e.png": "/portfolio/static/media/circles.16ab0f8e.png",
+    "static/media/glitch.f1fc1b56.jpg": "/portfolio/static/media/glitch.f1fc1b56.jpg",
+    "static/media/gridseq.f06fde13.png": "/portfolio/static/media/gridseq.f06fde13.png",
+    "static/media/shapes.c999aac4.png": "/portfolio/static/media/shapes.c999aac4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fed2963.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.d70904ca.chunk.js",
+    "static/css/main.5b115321.chunk.css",
+    "static/js/main.d1eed028.chunk.js"
+  ]
+}
