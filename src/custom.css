@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Work+Sans:wght@100&display=swap');
 
+* p {
+	font-size: 1.1rem;
+}
+
 body {
   font-family: "Comfortaa", sans-serif;
 }
@@ -39,8 +43,17 @@ nav {
 	margin: 0px;
 }
 
+.nav-links a {
+	font-size: 1.1rem;
+	text-decoration: none;
+}
+
 .nav-links li {
 	color: white;
+}
+
+.nav-links li:hover {
+	color: grey;
 }
 
 .content {
@@ -87,6 +100,7 @@ img {
 	border-color: white;
 	border-width: 1px;
 	border-style: solid;
+	border-radius: 5px;
 	box-shadow: 5px 5px;
 }
 
@@ -102,7 +116,6 @@ img {
 	text-align: left;
 	width: 60%;
 	margin-right: auto;
-	/*border-style: solid none none solid;*/
 }
 
 .about-right {
@@ -110,7 +123,6 @@ img {
 	text-align: right;
 	width: 60%;
 	margin-left: auto;
-	/*border-style: solid solid none none;*/
 }
 
 .about-left:before {
@@ -129,4 +141,112 @@ img {
 	width: 50%;
 	margin-left: auto;
 	border-top: 2px solid white;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+	background-color: white;
+	transition: all 0.3s ease;
+	border-radius: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.sketch-preview {
+		flex-flow: column;
+	}
+
+	.sketch-preview .left {
+		text-align: left;
+		float: none;
+		width: 100%;
+	}
+
+	.sketch-preview .right {
+		text-align: right;
+		float: none;
+		width: 100%;
+	}
+
+	.sketch-preview-right {
+		flex-flow: column-reverse;
+	}
+
+	.sketch-img {
+		margin: auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		width: 70%;
+	}
+
+	.sketch-img a img {
+		margin: auto;
+		width: 100%;
+	}
+
+	.sketch-text {
+		padding-top: 20px;
+		width: 100%;
+		align-items: center;
+	}
+
+	.about-left {
+		width: 80%;
+	}
+
+	.about-right {
+		width: 80%;
+	}
+
+	nav {
+		background: black;
+	}
+
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 85vh;
+		top: 15vh;
+		background-color: black;
+		border-top: 1px solid white;
+		border-left: 1px solid white;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		padding-inline-start: 0px;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.2s ease-in;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+.nav-active {
+	transform: translateX(0);
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);	
 }

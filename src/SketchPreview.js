@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 const SketchPreview = ({url, title, description, image, alignment}) => {
 	if (alignment === "left") {
@@ -25,14 +24,14 @@ const SketchPreview = ({url, title, description, image, alignment}) => {
 						</a>
 					</h3>
 					<div className="sketch-desc left">
-						{description}
+						<p>{description}</p>
 					</div>
 				</div>
 			</div>
 		);
 	} else if (alignment === "right") {
 		return (
-			<div className="sketch-preview">
+			<div className="sketch-preview sketch-preview-right">
 				<div className="sketch-text right">
 					<h3>
 						<a
@@ -44,7 +43,7 @@ const SketchPreview = ({url, title, description, image, alignment}) => {
 						</a>
 					</h3>
 					<div className="sketch-desc right">
-						{description}
+						<p>{description}</p>
 					</div>
 				</div>
 				<div className="sketch-img">

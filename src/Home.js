@@ -1,6 +1,5 @@
 import React from 'react';
 import SketchPreview from './SketchPreview';
-import glitch from './images/glitch.jpg';
 import circles from './images/circles.png';
 import shapes from './images/shapes.png';
 import gridseq from './images/gridseq.png';
