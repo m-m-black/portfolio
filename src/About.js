@@ -18,7 +18,7 @@ class About extends React.Component {
 					alignment="left" 
 				/>
 				<AboutFragment 
-					text="I’m proficient in Java, JavaScript, HTML, CSS, React.js, p5.js, Processing, Haskell and TidalCycles." 
+					text="I’m proficient in Java, JavaScript, C#, HTML, CSS, SQL, React.js, p5.js and Processing. I'm currently learning Haskell and Rust." 
 					alignment="right" 
 				/>
 			</div>
