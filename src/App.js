@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 class App extends React.Component {
 	render() {
 		return (
+			<div className='app'>
 				<Router basename="/portfolio">
 					<Nav />
 						<Switch>
@@ -14,6 +15,7 @@ class App extends React.Component {
 							<Route path="/about" component={About} />
 						</Switch>
 				</Router>
+			</div>
 		);
 	}
 }
