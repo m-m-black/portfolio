@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SketchPreview = ({url, title, description, image, alignment}) => {
+const SketchPreview = ({url, title, description, image, altText, alignment}) => {
 	if (alignment === "left") {
 		return (
 			<div className="sketch-preview">
@@ -10,7 +10,7 @@ const SketchPreview = ({url, title, description, image, alignment}) => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<img src={image} alt="glitch" width="300" />
+						<img src={image} alt={altText} width="300" />
 					</a>
 				</div>
 				<div className="sketch-text left">
@@ -52,7 +52,7 @@ const SketchPreview = ({url, title, description, image, alignment}) => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<img src={image} alt="glitch" width="300" />
+						<img src={image} alt={altText} width="300" />
 					</a>
 				</div>
 			</div>

@@ -13,6 +13,7 @@ class Home extends React.Component {
 					title="Circles"
 					description="Circles pulsate to create a musical meditation. The larger the circle, the slower the pulsation. Pitch is determined by the position of the circle. Inspired by the phase-based compositions of Steve Reich."
 					image={circles}
+					altText={"Link to Circles game"}
 					alignment="left"
 				/>
 				<SketchPreview 
@@ -20,6 +21,7 @@ class Home extends React.Component {
 					title="Shapes"
 					description="Draw a shape to build a melody. Draw multiple shapes to create a forest of sound. Listen as the melodies interact, weaving through each other in surprising ways. Inspired by the music of Laurie Spiegel."
 					image={shapes}
+					altText={"Link to Shapes game"}
 					alignment="right"
 				/>
 				<SketchPreview 
@@ -27,6 +29,7 @@ class Home extends React.Component {
 					title="GridSeq"
 					description="A musical sequencer that operates in 2 dimensions. Rhythms propagate outwards (up, down, left, right) from active cells. Sounds are triggered from the intersections of these cells. Unpredictable rhythms may occur."
 					image={gridseq}
+					altText={"Link to GridSeq game"}
 					alignment="left"
 				/>
 			</div>
