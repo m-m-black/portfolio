@@ -28,7 +28,7 @@ nav {
 }
 
 .nav-header {
-	color: white;
+	color: #DEDEDE;
 	align-items: center;
 	margin: 0px;
 }
@@ -48,7 +48,7 @@ nav {
 }
 
 .nav-links li {
-	color: white;
+	color: #DEDEDE;
 }
 
 .nav-links li:hover {
@@ -82,7 +82,7 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	background: black;
-	color: white;
+	color: #DEDEDE;
 }
 
 .sketch-desc {
@@ -96,7 +96,7 @@ nav {
 }
 
 img {
-	border-color: white;
+	border-color: #DEDEDE;
 	border-width: 1px;
 	border-style: solid;
 	border-radius: 5px;
@@ -107,7 +107,7 @@ img {
 	width: 80%;
 	margin: auto;
 	padding: 40px;
-	color: white;
+	color: #DEDEDE;
 }
 
 .about-left {
@@ -130,7 +130,7 @@ img {
 	padding: 10px;
 	width: 50%;
 	margin-right: auto;
-	border-top: 2px solid white;
+	border-top: 2px solid #DEDEDE;
 }
 
 .about-right:before {
@@ -139,7 +139,7 @@ img {
 	padding: 10px;
 	width: 50%;
 	margin-left: auto;
-	border-top: 2px solid white;
+	border-top: 2px solid #DEDEDE;
 }
 
 .burger {
@@ -151,7 +151,7 @@ img {
 	width: 25px;
 	height: 3px;
 	margin: 5px;
-	background-color: white;
+	background-color: #DEDEDE;
 	transition: all 0.3s ease;
 	border-radius: 25px;
 }
@@ -219,9 +219,9 @@ img {
 		height: 85vh;
 		top: 15vh;
 		background-color: black;
-		border-top: 1px solid white;
-		border-left: 1px solid white;
-		border-bottom: 1px solid white;
+		border-top: 1px solid #DEDEDE;
+		border-left: 1px solid #DEDEDE;
+		border-bottom: 1px solid #DEDEDE;
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
