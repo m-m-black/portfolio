@@ -1,15 +1,17 @@
-import Link from 'next/link'
+import Head from "next/head";
+import Layout from "../components/layout";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Hello World! This is the Home page</p>
-      <p>
-        Visit the <Link href="/about">About</Link> page.
-      </p>
-    </div>
-  )
-}
+    <Layout>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <div>
+        <p>This site is under construction. Please check back later.</p>
+      </div>
+    </Layout>
+  );
+};
 
-export default Home
+export default Home;
