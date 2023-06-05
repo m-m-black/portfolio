@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
+import Navbar from "./navbar";
 
 const Layout = ({ children }) => {
   return (
@@ -7,7 +8,8 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <Navbar />
+      <main className={styles.main}>{children}</main>
     </div>
   );
 };

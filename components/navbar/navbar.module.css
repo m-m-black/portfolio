@@ -1,0 +1,11 @@
+.a {
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.a:hover {
+  color: #666;
+  text-decoration: none;
+}
