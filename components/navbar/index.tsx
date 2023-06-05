@@ -1,7 +1,24 @@
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import navbarStyles from "./navbar.module.css";
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div style={styles.navbarContainer}>
       <div style={styles.homeButtonContainer}>
@@ -9,20 +26,41 @@ const Navbar = () => {
           Morgan Black
         </Link>
       </div>
-      <div style={styles.linksContainer}>
-        <Link className={navbarStyles.a} href={"/about"}>
-          About
-        </Link>
-        <Link className={navbarStyles.a} href={"/work"}>
-          Work
-        </Link>
-        <Link
-          className={navbarStyles.a}
-          href={"mailto:morganblack1988@gmail.com"}
-        >
-          Contact
-        </Link>
-      </div>
+      {isMobile ? (
+        <div style={styles.linksContainer}>
+          {/**
+           * TODO: Burger menu
+           */}
+          <p
+            onClick={() => {
+              alert("This functionality is under construction.");
+            }}
+          >
+            Menu
+          </p>
+        </div>
+      ) : (
+        <div style={styles.linksContainer}>
+          <Link
+            className={`${navbarStyles.a} ${navbarStyles.padded}`}
+            href={"/about"}
+          >
+            About
+          </Link>
+          <Link
+            className={`${navbarStyles.a} ${navbarStyles.padded}`}
+            href={"/work"}
+          >
+            Work
+          </Link>
+          <Link
+            className={`${navbarStyles.a} ${navbarStyles.padded}`}
+            href={"mailto:morganblack1988@gmail.com"}
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
@@ -36,9 +74,13 @@ const styles = {
   },
   homeButtonContainer: {
     display: "flex",
+    padding: "20px",
+    alignItems: "center",
   },
   linksContainer: {
     display: "flex",
+    padding: "20px",
+    alignItems: "center",
   },
 };
 
