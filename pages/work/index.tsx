@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
-import messages from "./messages";
+import { messages } from "./messages";
 
 const Work = () => {
   return (
