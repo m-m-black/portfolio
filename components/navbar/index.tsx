@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import navbarStyles from "./navbar.module.css";
+import Menu from "../menu";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  const showMenu = () => {
+    setIsMenuVisible(true);
+  };
+
+  const hideMenu = (e) => {
+    setIsMenuVisible(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,18 +37,13 @@ const Navbar = () => {
         </Link>
       </div>
       {isMobile ? (
-        <div style={styles.linksContainer}>
-          {/**
-           * TODO: Burger menu
-           */}
-          <p
-            onClick={() => {
-              alert("This functionality is under construction.");
-            }}
-          >
-            Menu
-          </p>
-        </div>
+        isMenuVisible ? (
+          <Menu hideMenu={hideMenu} />
+        ) : (
+          <div style={styles.linksContainer}>
+            <p onClick={showMenu}>Menu</p>
+          </div>
+        )
       ) : (
         <div style={styles.linksContainer}>
           <Link
