@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 const App = ({ Component, pageProps }) => {
   return (
     <div className={montserrat.className}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </div>
   );
 };
