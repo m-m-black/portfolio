@@ -30,8 +30,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div style={styles.navbarContainer}>
-      <div style={styles.homeButtonContainer}>
+    <div className={navbarStyles.navbarContainer}>
+      <div className={navbarStyles.homeButtonContainer}>
         <Link className={navbarStyles.a} href={"/"}>
           Morgan Black
         </Link>
@@ -40,12 +40,12 @@ const Navbar = () => {
         isMenuVisible ? (
           <Menu hideMenu={hideMenu} />
         ) : (
-          <div style={styles.linksContainer}>
+          <div className={navbarStyles.linksContainer}>
             <p onClick={showMenu}>Menu</p>
           </div>
         )
       ) : (
-        <div style={styles.linksContainer}>
+        <div className={navbarStyles.linksContainer}>
           <Link
             className={`${navbarStyles.a} ${navbarStyles.padded}`}
             href={"/about"}
@@ -68,25 +68,6 @@ const Navbar = () => {
       )}
     </div>
   );
-};
-
-const styles = {
-  navbarContainer: {
-    display: "flex",
-    justifyContent: "space-between",
-    width: "100%",
-    backgroundColor: "#f8dfcb",
-  },
-  homeButtonContainer: {
-    display: "flex",
-    padding: "20px",
-    alignItems: "center",
-  },
-  linksContainer: {
-    display: "flex",
-    padding: "20px",
-    alignItems: "center",
-  },
 };
 
 export default Navbar;
