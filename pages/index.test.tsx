@@ -1,17 +1,17 @@
-import { render, screen } from "@testing-library/react";
-import Home from "./index.page";
+import { render, screen } from '@testing-library/react'
+import Home from './index.page'
 
-describe("Home", () => {
+describe('Home', () => {
   beforeEach(() => {
-    render(<Home />);
-  });
+    render(<Home />)
+  })
 
-  it("renders the heading", () => {
-    expect(screen.getByRole("heading", { name: "Morgan Black" })).toBeInTheDocument();
-  });
+  it('renders the heading', () => {
+    expect(screen.getByRole('heading', { name: 'Morgan Black' })).toBeInTheDocument()
+  })
 
-  it("renders a link to GitHub", () => {
-    const link = screen.getByRole("link", { name: /m-m-black/i });
-    expect(link).toHaveAttribute("href", "https://github.com/m-m-black");
-  });
-});
+  it('renders a link to GitHub', () => {
+    const link = screen.getByRole('link', { name: /m-m-black/i })
+    expect(link).toHaveAttribute('href', 'https://github.com/m-m-black')
+  })
+})

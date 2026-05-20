@@ -25,10 +25,13 @@ To run a single test file: `npx vitest run pages/index.test.tsx`
 ## Key conventions
 
 ### Page file extension
+
 `next.config.js` sets `pageExtensions: ["page.tsx"]`. Only `.page.tsx` files are treated as pages — plain `.tsx` files are ignored by the router, which is what allows test files to live next to pages without being served as routes.
 
 ### Styling
+
 All styling uses Tailwind utility classes. `styles/global.css` contains only `@import "tailwindcss"`. Inter is loaded via `next/font/google` in `_app.page.tsx` and applied at the app wrapper level — pages inherit it without doing anything.
 
 ### Tests
+
 Test files live next to the code they test (e.g. `pages/index.test.tsx`). Vitest globals (`describe`, `it`, `expect`) are available without imports — configured via `globals: true` in `vitest.config.ts` and `"types": ["vitest/globals"]` in `tsconfig.json`.

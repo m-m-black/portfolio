@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Icon from "../components/icon";
+import Head from 'next/head'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
+import Icon from '../components/icon'
 
 const Home = () => {
   return (
@@ -9,9 +9,7 @@ const Home = () => {
         <title>Morgan Black</title>
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen bg-zinc-950 gap-10">
-        <h1 className="text-6xl font-bold tracking-tight text-white">
-          Morgan Black
-        </h1>
+        <h1 className="text-6xl font-bold tracking-tight text-white">Morgan Black</h1>
         <a
           href="https://github.com/m-m-black"
           target="_blank"
@@ -23,7 +21,7 @@ const Home = () => {
         </a>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
