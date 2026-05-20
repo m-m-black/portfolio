@@ -1,4 +1,4 @@
-# next-portfolio
+# morganblack.dev portfolio
 
 Personal portfolio site built with Next.js, TypeScript, and Tailwind CSS. Deployed on Vercel.
 
