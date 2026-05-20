@@ -1,27 +1,11 @@
-# Basic export example
+# next-portfolio
 
-This example shows basic usage of `output: 'export'`.
+Personal portfolio site built with Next.js, TypeScript, and Tailwind CSS. Deployed on Vercel.
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/basic-export)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/basic-export&project-name=basic-export&repository-name=basic-export)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Development
 
 ```bash
-npx create-next-app --example basic-export basic-export-app
+npm run dev        # Start development server
+npm run build      # Production build
+npm test           # Run tests
 ```
-
-```bash
-yarn create next-app --example basic-export basic-export-app
-```
-
-```bash
-pnpm create next-app --example basic-export basic-export-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
