@@ -5,35 +5,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Static export to /out (Next.js output: 'export' mode)
-npm run start    # Serve the production build
+npm run dev          # Start development server
+npm run build        # Static export to /out
+npm test             # Run test suite once
+npm run test:watch   # Run tests in watch mode
 ```
 
-There is no test suite or linter configured.
+To run a single test file: `npx vitest run pages/index.test.tsx`
 
-## Architecture
+## Stack
 
-This is a Next.js portfolio site that uses **static export** (`output: 'export'` in `next.config.js`), so there are no server-side features — no API routes, no `getServerSideProps`. All pages are statically generated at build time.
+- **Next.js 16** (Pages Router, static export) — no server-side features, no API routes
+- **React 19**, **TypeScript 6** (strict mode)
+- **Tailwind CSS v4** via `@tailwindcss/postcss` — no `tailwind.config.js`, configured entirely through CSS
+- **Vitest** + **React Testing Library** + **jsdom** for tests
+- **Vercel** for hosting — auto-deploys on merge to `main`
+- **GitHub Actions** (`.github/workflows/ci.yml`) runs the test suite as a required branch protection check, blocking merges on failure
 
-### Page file convention
+## Key conventions
 
-Only files with the `.page.tsx` extension are treated as pages (`pageExtensions: ["page.tsx"]` in `next.config.js`). Standard Next.js `pages/foo.tsx` files are ignored — new pages must use `.page.tsx`.
-
-### Layout pattern
-
-Every page wraps its content in `<Layout>`, which provides the full-page container and `<Navbar>`. Pages set their own `<Head><title>` inside `<Layout>`.
-
-### Responsive navbar
-
-`Navbar` detects mobile via a `resize` event listener (`window.innerWidth <= 767`). On mobile it renders a `Menu` overlay instead of inline links. The breakpoint (767px) matches the CSS media queries in `layout.module.css` and `navbar.module.css`.
-
-### Content / copy
-
-Page copy is kept in co-located `messages.tsx` files (e.g. `pages/about/messages.tsx`) rather than inline in the component. Add or edit text there rather than touching the page component.
+### Page file extension
+`next.config.js` sets `pageExtensions: ["page.tsx"]`. Only `.page.tsx` files are treated as pages — plain `.tsx` files are ignored by the router, which is what allows test files to live next to pages without being served as routes.
 
 ### Styling
+All styling uses Tailwind utility classes. `styles/global.css` contains only `@import "tailwindcss"`. Inter is loaded via `next/font/google` in `_app.page.tsx` and applied at the app wrapper level — pages inherit it without doing anything.
 
-- Global base styles live in `styles/global.css` (background colour `#f8dfcb`, Montserrat via `next/font/google` in `_app.page.tsx`).
-- Component-level styles use CSS Modules (`.module.css` files next to each component).
-- `Menu` uses inline `styles` objects defined at the bottom of `components/menu/index.tsx` rather than a CSS Module — this is intentional for its full-screen overlay positioning.
+### Tests
+Test files live next to the code they test (e.g. `pages/index.test.tsx`). Vitest globals (`describe`, `it`, `expect`) are available without imports — configured via `globals: true` in `vitest.config.ts` and `"types": ["vitest/globals"]` in `tsconfig.json`.
