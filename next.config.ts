@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: "export",
-  pageExtensions: ["page.tsx"],
-};
+  output: 'export',
+  pageExtensions: ['page.tsx'],
+}
 
-export default nextConfig;
+export default nextConfig
