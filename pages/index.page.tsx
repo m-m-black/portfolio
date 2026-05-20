@@ -1,5 +1,6 @@
 import Head from "next/head";
-import GitHubIcon from "../components/github-icon";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Icon from "../components/icon";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
           rel="noreferrer"
           className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-zinc-700 text-zinc-400 text-sm font-medium transition-all duration-200 hover:border-zinc-400 hover:text-white"
         >
-          <GitHubIcon />
+          <Icon icon={GitHubLogoIcon} />
           m-m-black
         </a>
       </main>
