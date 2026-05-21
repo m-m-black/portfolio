@@ -2,8 +2,7 @@ import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Inter } from 'next/font/google'
 import { AnimatePresence, motion } from 'motion/react'
-import Nav from '../components/Nav'
-import ThemeToggle from '../components/ThemeToggle'
+import Header from '../components/Header'
 import SolsticeWidget from '../components/SolsticeWidget'
 import '../styles/global.css'
 
@@ -14,10 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <div className={inter.className}>
-      <Nav />
-      <div className="fixed top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
+      <Header />
       <SolsticeWidget />
       <AnimatePresence mode="wait">
         <motion.div
