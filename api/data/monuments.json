@@ -1,0 +1,81 @@
+[
+  {
+    "id": "stonehenge",
+    "name": "Stonehenge",
+    "country": "United Kingdom",
+    "region": "Wiltshire",
+    "type": "henge",
+    "lat": 51.1789,
+    "lng": -1.8262,
+    "stone_count": 93,
+    "diameter_m": 33.0,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "confirmed" },
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "callanish",
+    "name": "Calanais Standing Stones",
+    "country": "United Kingdom",
+    "region": "Isle of Lewis",
+    "type": "stone_circle",
+    "lat": 58.1977,
+    "lng": -6.7447,
+    "stone_count": 50,
+    "diameter_m": 11.3,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "lunar_major_standstill", "confidence": "confirmed" },
+      { "event": "midsummer_sunset", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "newgrange",
+    "name": "Newgrange",
+    "country": "Ireland",
+    "region": "County Meath",
+    "type": "passage_tomb",
+    "lat": 53.6947,
+    "lng": -6.4755,
+    "stone_count": 97,
+    "diameter_m": 85.0,
+    "age_bp": 5200,
+    "alignments": [
+      { "event": "midwinter_sunrise", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "avebury",
+    "name": "Avebury",
+    "country": "United Kingdom",
+    "region": "Wiltshire",
+    "type": "henge",
+    "lat": 51.4286,
+    "lng": -1.8543,
+    "stone_count": 98,
+    "diameter_m": 331.0,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "probable" },
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "ring-of-brodgar",
+    "name": "Ring of Brodgar",
+    "country": "United Kingdom",
+    "region": "Orkney",
+    "type": "stone_circle",
+    "lat": 59.001,
+    "lng": -3.2296,
+    "stone_count": 60,
+    "diameter_m": 104.0,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "midsummer_sunset", "confidence": "probable" },
+      { "event": "midwinter_sunrise", "confidence": "probable" }
+    ]
+  }
+]
