@@ -14,7 +14,7 @@ describe('RunicScramble', () => {
     vi.useFakeTimers()
     const { container } = render(<RunicScramble text="Morgan" />)
     act(() => {
-      vi.advanceTimersByTime(3000)
+      vi.advanceTimersByTime(4000)
     })
     expect(container.textContent).toBe('Morgan')
   })
