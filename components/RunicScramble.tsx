@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
 const RUNES = 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ'
-const CYCLE_INTERVAL = 50
-const CHAR_STAGGER = 200
-const RESOLVE_DELAY = 800
+const INITIAL_DELAY = 300  // ms before the first character resolves
+const CHAR_STAGGER = 240   // ms between each character resolving
+const HOP_OFFSET = 160      // ms between each hop
 
 const randomRune = () => RUNES[Math.floor(Math.random() * RUNES.length)]
 
@@ -18,36 +18,43 @@ const RunicScramble = ({ text, className }: Props) => {
   const [displayed, setDisplayed] = useState<string[]>(chars)
 
   useEffect(() => {
-    const resolved = chars.map((c) => c === ' ')
-
     setDisplayed(chars.map((c) => (c === ' ' ? ' ' : randomRune())))
 
-    const resolveTimers = chars.map((_, i) =>
-      setTimeout(
-        () => {
-          resolved[i] = true
-        },
-        RESOLVE_DELAY + i * CHAR_STAGGER
-      )
-    )
+    const resolveOrder = chars
+      .map((_, i) => i)
+      .filter((i) => chars[i] !== ' ')
 
-    const cycleTimer = setInterval(() => {
-      setDisplayed(chars.map((c, i) => (resolved[i] ? c : randomRune())))
-    }, CYCLE_INTERVAL)
+    const timers = resolveOrder.flatMap((charIndex, staggerIndex) => {
+      const resolveAt = INITIAL_DELAY + staggerIndex * CHAR_STAGGER
 
-    const finalTimer = setTimeout(
-      () => {
-        clearInterval(cycleTimer)
-        setDisplayed(chars)
-      },
-      RESOLVE_DELAY + chars.length * CHAR_STAGGER + CYCLE_INTERVAL * 2
-    )
+      const hop1 = setTimeout(() => {
+        setDisplayed((prev) => {
+          const next = [...prev]
+          next[charIndex] = randomRune()
+          return next
+        })
+      }, resolveAt - HOP_OFFSET * 2)
 
-    return () => {
-      resolveTimers.forEach(clearTimeout)
-      clearInterval(cycleTimer)
-      clearTimeout(finalTimer)
-    }
+      const hop2 = setTimeout(() => {
+        setDisplayed((prev) => {
+          const next = [...prev]
+          next[charIndex] = randomRune()
+          return next
+        })
+      }, resolveAt - HOP_OFFSET)
+
+      const snap = setTimeout(() => {
+        setDisplayed((prev) => {
+          const next = [...prev]
+          next[charIndex] = chars[charIndex]
+          return next
+        })
+      }, resolveAt)
+
+      return [hop1, hop2, snap]
+    })
+
+    return () => timers.forEach(clearTimeout)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
