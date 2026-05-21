@@ -33,3 +33,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local plan files
+IDEAS.md
+ISSUES.md
+PRD.md
