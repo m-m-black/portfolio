@@ -132,8 +132,8 @@ export type Countdown = {
   seconds: number
 }
 
-export function getCountdown(targetDate: Date): Countdown {
-  const diff = Math.max(0, targetDate.getTime() - Date.now())
+export function getCountdown(targetDate: Date, now: Date = new Date()): Countdown {
+  const diff = Math.max(0, targetDate.getTime() - now.getTime())
   return {
     days: Math.floor(diff / 86400000),
     hours: Math.floor(diff / 3600000) % 24,

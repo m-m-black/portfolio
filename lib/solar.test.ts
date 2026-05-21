@@ -70,16 +70,18 @@ describe('getNextSolstice', () => {
 
 describe('getCountdown', () => {
   it('returns correct days, hours, minutes, seconds for a future date', () => {
-    const target = new Date(Date.now() + 2 * 86400000 + 3 * 3600000 + 30 * 60000)
-    const result = getCountdown(target)
+    const now = new Date('2026-01-01T00:00:00.000Z')
+    const target = new Date(now.getTime() + 2 * 86400000 + 3 * 3600000 + 30 * 60000)
+    const result = getCountdown(target, now)
     expect(result.days).toBe(2)
     expect(result.hours).toBe(3)
     expect(result.minutes).toBe(30)
   })
 
   it('returns all zeros for a past date', () => {
-    const past = new Date(Date.now() - 10000)
-    const result = getCountdown(past)
+    const now = new Date('2026-01-01T00:00:00.000Z')
+    const past = new Date(now.getTime() - 10000)
+    const result = getCountdown(past, now)
     expect(result).toEqual({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   })
 })
