@@ -30,7 +30,40 @@ To run a single test file: `npx vitest run pages/index.test.tsx`
 
 ### Styling
 
-All styling uses Tailwind utility classes. `styles/global.css` contains only `@import "tailwindcss"`. Inter is loaded via `next/font/google` in `_app.page.tsx` and applied at the app wrapper level — pages inherit it without doing anything.
+All styling uses Tailwind utility classes. Inter is loaded via `next/font/google` in `_app.page.tsx` and applied at the app wrapper level — pages inherit it without doing anything. Font rendering flags (`antialiased`, `optimizeLegibility`, `font-synthesis: none`) are set on `body` in `global.css` — do not add them per-component.
+
+#### Design tokens
+
+`styles/global.css` defines semantic CSS custom properties for both light and dark mode using the OKLCH color space. A `@theme inline` block maps them to Tailwind utilities:
+
+| Token | Tailwind utility | Purpose |
+|-------|-----------------|---------|
+| `--background` | `bg-background` | Page background |
+| `--surface` | `bg-surface` | Slightly elevated surface (e.g. hover fills) |
+| `--surface-raised` | `bg-surface-raised` | Further elevated (e.g. cards) |
+| `--border` | `border-border` | Default border color |
+| `--text` | `text-text` | Primary text |
+| `--text-muted` | `text-text-muted` | Secondary/muted text |
+| `--accent` | `bg-accent`, `text-accent` | Brand accent (olive green) |
+| `--accent-foreground` | `text-accent-foreground` | Text on accent backgrounds |
+
+**Never use hardcoded Tailwind color classes** (`zinc-*`, `gray-*`, etc.) — always use the semantic tokens above so both themes stay consistent.
+
+Opacity modifiers work with tokens: `bg-accent/20`, `hover:bg-surface`.
+
+#### Light/dark mode
+
+Dark mode is class-based: adding `.dark` to `<html>` activates the dark token values. It is **not** driven by `prefers-color-scheme` alone.
+
+- `pages/_document.page.tsx` contains a blocking inline script that reads `localStorage` and `prefers-color-scheme` before React hydrates, preventing any flash of the wrong theme.
+- `components/ThemeToggle.tsx` handles runtime switching — it toggles the `.dark` class on `document.documentElement` and persists the choice to `localStorage`.
+
+#### Mobile
+
+- Viewport meta tag is set in `_document.page.tsx` (`width=device-width, initial-scale=1`).
+- Use responsive prefixes for anything that differs between breakpoints: `text-4xl sm:text-6xl`, `gap-8 sm:gap-10`.
+- Touch targets should be at least 44px — use `p-3` minimum on interactive icon buttons.
+- `-webkit-tap-highlight-color: transparent` is applied globally to `a` and `button` in `global.css`.
 
 ### Tests
 
