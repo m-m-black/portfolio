@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
-import Icon from '../components/icon'
+import RunicScramble from '../components/RunicScramble'
 
 const Home = () => {
   return (
@@ -9,16 +8,14 @@ const Home = () => {
         <title>Morgan Black</title>
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen bg-background gap-8 sm:gap-10">
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-text">Morgan Black</h1>
-        <a
-          href="https://github.com/m-m-black"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-border text-text-muted text-sm font-medium transition-all duration-200 hover:border-text-muted hover:text-text"
+        <h1
+          aria-label="Morgan Black"
+          className="text-6xl sm:text-8xl tracking-tight text-text font-mono"
         >
-          <Icon icon={GitHubLogoIcon} />
-          m-m-black
-        </a>
+          <RunicScramble text="Morgan" className="font-light" />
+          {' '}
+          <RunicScramble text="Black" className="font-black" />
+        </h1>
       </main>
     </>
   )
