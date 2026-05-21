@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { AnimatePresence, motion } from 'motion/react'
 import Nav from '../components/Nav'
 import ThemeToggle from '../components/ThemeToggle'
+import SolsticeWidget from '../components/SolsticeWidget'
 import '../styles/global.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,6 +18,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
       </div>
+      <SolsticeWidget />
       <AnimatePresence mode="wait">
         <motion.div
           key={router.pathname}
