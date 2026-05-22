@@ -36,6 +36,17 @@
   --color-accent-foreground: var(--accent-foreground);
 }
 
+@keyframes ellipsis-dot {
+  0%, 60%, 100% { opacity: 0 }
+  30% { opacity: 1 }
+}
+
+@theme inline {
+  --animate-ellipsis-1: ellipsis-dot 1.4s infinite 0s;
+  --animate-ellipsis-2: ellipsis-dot 1.4s infinite 0.2s;
+  --animate-ellipsis-3: ellipsis-dot 1.4s infinite 0.4s;
+}
+
 @layer base {
   body {
     background-color: var(--background);
