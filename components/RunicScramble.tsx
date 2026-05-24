@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { Noto_Sans_Runic } from 'next/font/google'
+
+const notoRunic = Noto_Sans_Runic({ weight: '400', preload: false })
 
 const RUNES = 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ'
-const INITIAL_DELAY = 300  // ms before the first character resolves
-const CHAR_STAGGER = 240   // ms between each character resolving
-const HOP_OFFSET = 160      // ms between each hop
+const FADE_MS = 120
 
 const randomRune = () => RUNES[Math.floor(Math.random() * RUNES.length)]
 
@@ -14,56 +15,52 @@ type Props = {
 
 const RunicScramble = ({ text, className }: Props) => {
   const chars = text.split('')
+  const [runeChars, setRuneChars] = useState<Record<number, string>>({})
+  const [hovering, setHovering] = useState<Set<number>>(new Set())
 
-  const [displayed, setDisplayed] = useState<string[]>(chars)
+  const handleEnter = (i: number) => {
+    if (chars[i] === ' ') return
+    setRuneChars(prev => ({ ...prev, [i]: randomRune() }))
+    setHovering(prev => new Set([...prev, i]))
+  }
 
-  useEffect(() => {
-    setDisplayed(chars.map((c) => (c === ' ' ? ' ' : randomRune())))
-
-    const resolveOrder = chars
-      .map((_, i) => i)
-      .filter((i) => chars[i] !== ' ')
-
-    const timers = resolveOrder.flatMap((charIndex, staggerIndex) => {
-      const resolveAt = INITIAL_DELAY + staggerIndex * CHAR_STAGGER
-
-      const hop1 = setTimeout(() => {
-        setDisplayed((prev) => {
-          const next = [...prev]
-          next[charIndex] = randomRune()
-          return next
-        })
-      }, resolveAt - HOP_OFFSET * 2)
-
-      const hop2 = setTimeout(() => {
-        setDisplayed((prev) => {
-          const next = [...prev]
-          next[charIndex] = randomRune()
-          return next
-        })
-      }, resolveAt - HOP_OFFSET)
-
-      const snap = setTimeout(() => {
-        setDisplayed((prev) => {
-          const next = [...prev]
-          next[charIndex] = chars[charIndex]
-          return next
-        })
-      }, resolveAt)
-
-      return [hop1, hop2, snap]
-    })
-
-    return () => timers.forEach(clearTimeout)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  const handleLeave = (i: number) => {
+    setHovering(prev => { const s = new Set(prev); s.delete(i); return s })
+    setRuneChars(prev => { const m = { ...prev }; delete m[i]; return m })
+  }
 
   return (
     <span aria-hidden className={className}>
-      {displayed.map((char, i) => (
-        <span key={i} style={{ display: 'inline-block', width: '1ch', textAlign: 'center' }}>
-          {char}
-        </span>
-      ))}
+      {chars.map((char, i) => {
+        const isHovered = hovering.has(i)
+        const runeChar = runeChars[i]
+        return (
+          <span
+            key={i}
+            style={{ display: 'inline-block', width: '1ch', textAlign: 'center', position: 'relative', cursor: 'default' }}
+            onMouseEnter={() => handleEnter(i)}
+            onMouseLeave={() => handleLeave(i)}
+          >
+            <span style={{
+              opacity: isHovered ? 0 : 1,
+              transition: isHovered ? 'none' : `opacity ${FADE_MS}ms ease`,
+            }}>
+              {char}
+            </span>
+            {runeChar && (
+              <span style={{
+                position: 'absolute', top: 0, left: 0, right: 0,
+                textAlign: 'center',
+                fontFamily: notoRunic.style.fontFamily,
+                color: 'var(--accent)',
+                animation: `runic-fade-in ${FADE_MS}ms ease forwards`,
+              }}>
+                {runeChar}
+              </span>
+            )}
+          </span>
+        )
+      })}
     </span>
   )
 }
