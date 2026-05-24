@@ -77,5 +77,665 @@
       { "event": "midsummer_sunset", "confidence": "probable" },
       { "event": "midwinter_sunrise", "confidence": "probable" }
     ]
+  },
+  {
+    "id": "castlerigg",
+    "name": "Castlerigg Stone Circle",
+    "country": "United Kingdom",
+    "region": "Cumbria",
+    "type": "stone_circle",
+    "lat": 54.6029,
+    "lng": -3.0988,
+    "stone_count": 38,
+    "diameter_m": 30.0,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "long-meg",
+    "name": "Long Meg and Her Daughters",
+    "country": "United Kingdom",
+    "region": "Cumbria",
+    "type": "stone_circle",
+    "lat": 54.728,
+    "lng": -2.6674,
+    "stone_count": 70,
+    "diameter_m": 110.0,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "swinside",
+    "name": "Swinside Stone Circle",
+    "country": "United Kingdom",
+    "region": "Cumbria",
+    "type": "stone_circle",
+    "lat": 54.3353,
+    "lng": -3.2567,
+    "stone_count": 55,
+    "diameter_m": 28.0,
+    "age_bp": 5000,
+    "alignments": []
+  },
+  {
+    "id": "stanton-drew",
+    "name": "Stanton Drew Stone Circles",
+    "country": "United Kingdom",
+    "region": "Somerset",
+    "type": "stone_circle",
+    "lat": 51.3617,
+    "lng": -2.5762,
+    "stone_count": 30,
+    "diameter_m": 113.0,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "rollright",
+    "name": "Rollright Stones",
+    "country": "United Kingdom",
+    "region": "Oxfordshire",
+    "type": "stone_circle",
+    "lat": 51.9755,
+    "lng": -1.5698,
+    "stone_count": 77,
+    "diameter_m": 31.0,
+    "age_bp": 4500,
+    "alignments": []
+  },
+  {
+    "id": "arbor-low",
+    "name": "Arbor Low",
+    "country": "United Kingdom",
+    "region": "Derbyshire",
+    "type": "henge",
+    "lat": 53.1681,
+    "lng": -1.762,
+    "stone_count": 50,
+    "diameter_m": 41.0,
+    "age_bp": 4500,
+    "alignments": []
+  },
+  {
+    "id": "stenness",
+    "name": "Stones of Stenness",
+    "country": "United Kingdom",
+    "region": "Orkney",
+    "type": "stone_circle",
+    "lat": 59.0037,
+    "lng": -3.2071,
+    "stone_count": 12,
+    "diameter_m": 31.0,
+    "age_bp": 5100,
+    "alignments": [
+      { "event": "midwinter_sunset", "confidence": "probable" },
+      { "event": "lunar_major_standstill", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "drombeg",
+    "name": "Drombeg Stone Circle",
+    "country": "Ireland",
+    "region": "County Cork",
+    "type": "stone_circle",
+    "lat": 51.5593,
+    "lng": -9.0852,
+    "stone_count": 17,
+    "diameter_m": 9.3,
+    "age_bp": 3100,
+    "alignments": [
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "poulnabrone",
+    "name": "Poulnabrone Dolmen",
+    "country": "Ireland",
+    "region": "County Clare",
+    "type": "dolmen",
+    "lat": 53.0484,
+    "lng": -9.1404,
+    "stone_count": 6,
+    "diameter_m": null,
+    "age_bp": 5800,
+    "alignments": []
+  },
+  {
+    "id": "knowth",
+    "name": "Knowth",
+    "country": "Ireland",
+    "region": "County Meath",
+    "type": "passage_tomb",
+    "lat": 53.7029,
+    "lng": -6.4914,
+    "stone_count": 127,
+    "diameter_m": 67.0,
+    "age_bp": 5200,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "probable" },
+      { "event": "equinox_sunset", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "dowth",
+    "name": "Dowth",
+    "country": "Ireland",
+    "region": "County Meath",
+    "type": "passage_tomb",
+    "lat": 53.7003,
+    "lng": -6.4595,
+    "stone_count": 115,
+    "diameter_m": 63.0,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "beaghmore",
+    "name": "Beaghmore Stone Circles",
+    "country": "United Kingdom",
+    "region": "County Tyrone",
+    "type": "stone_circle",
+    "lat": 54.7736,
+    "lng": -6.9583,
+    "stone_count": 1200,
+    "diameter_m": 20.0,
+    "age_bp": 3500,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "carnac",
+    "name": "Carnac Alignments",
+    "country": "France",
+    "region": "Brittany",
+    "type": "alignment",
+    "lat": 47.5997,
+    "lng": -3.0644,
+    "stone_count": 3000,
+    "diameter_m": null,
+    "age_bp": 5500,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "gavrinis",
+    "name": "Gavrinis",
+    "country": "France",
+    "region": "Brittany",
+    "type": "passage_tomb",
+    "lat": 47.5839,
+    "lng": -2.892,
+    "stone_count": 29,
+    "diameter_m": 50.0,
+    "age_bp": 5600,
+    "alignments": [
+      { "event": "midwinter_sunrise", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "almendres",
+    "name": "Almendres Cromlech",
+    "country": "Portugal",
+    "region": "Évora",
+    "type": "stone_circle",
+    "lat": 38.5576,
+    "lng": -8.07,
+    "stone_count": 95,
+    "diameter_m": 60.0,
+    "age_bp": 7000,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "confirmed" },
+      { "event": "midsummer_sunrise", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "zambujeiro",
+    "name": "Anta Grande do Zambujeiro",
+    "country": "Portugal",
+    "region": "Évora",
+    "type": "dolmen",
+    "lat": 38.5095,
+    "lng": -8.0636,
+    "stone_count": 7,
+    "diameter_m": null,
+    "age_bp": 6000,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "ggantija",
+    "name": "Ġgantija",
+    "country": "Malta",
+    "region": "Gozo",
+    "type": "passage_tomb",
+    "lat": 36.0493,
+    "lng": 14.2694,
+    "stone_count": null,
+    "diameter_m": 50.0,
+    "age_bp": 5700,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "hagar-qim",
+    "name": "Ħaġar Qim",
+    "country": "Malta",
+    "region": "Malta",
+    "type": "passage_tomb",
+    "lat": 35.8277,
+    "lng": 14.442,
+    "stone_count": null,
+    "diameter_m": 28.0,
+    "age_bp": 5500,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "mnajdra",
+    "name": "Mnajdra",
+    "country": "Malta",
+    "region": "Malta",
+    "type": "passage_tomb",
+    "lat": 35.8267,
+    "lng": 14.4364,
+    "stone_count": null,
+    "diameter_m": 15.0,
+    "age_bp": 5500,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "confirmed" },
+      { "event": "equinox_sunset", "confidence": "confirmed" },
+      { "event": "midsummer_sunrise", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "nabta-playa",
+    "name": "Nabta Playa Calendar Circle",
+    "country": "Egypt",
+    "region": "Western Desert",
+    "type": "stone_circle",
+    "lat": 22.5322,
+    "lng": 30.7175,
+    "stone_count": 10,
+    "diameter_m": 4.5,
+    "age_bp": 7000,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "waylands-smithy",
+    "name": "Wayland's Smithy",
+    "country": "United Kingdom",
+    "region": "Oxfordshire",
+    "type": "passage_tomb",
+    "lat": 51.5677,
+    "lng": -1.5949,
+    "stone_count": 14,
+    "diameter_m": 55.0,
+    "age_bp": 5500,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "pentre-ifan",
+    "name": "Pentre Ifan",
+    "country": "United Kingdom",
+    "region": "Pembrokeshire",
+    "type": "dolmen",
+    "lat": 51.9993,
+    "lng": -4.7789,
+    "stone_count": 6,
+    "diameter_m": null,
+    "age_bp": 5600,
+    "alignments": []
+  },
+  {
+    "id": "easter-aquhorthies",
+    "name": "Easter Aquhorthies",
+    "country": "United Kingdom",
+    "region": "Aberdeenshire",
+    "type": "stone_circle",
+    "lat": 57.2856,
+    "lng": -2.5386,
+    "stone_count": 10,
+    "diameter_m": 19.5,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "lunar_major_standstill", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "ales-stenar",
+    "name": "Ales Stenar",
+    "country": "Sweden",
+    "region": "Skåne",
+    "type": "stone_circle",
+    "lat": 55.3833,
+    "lng": 14.0564,
+    "stone_count": 59,
+    "diameter_m": 67.0,
+    "age_bp": 1400,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" },
+      { "event": "midwinter_sunset", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "goseck",
+    "name": "Goseck Circle",
+    "country": "Germany",
+    "region": "Saxony-Anhalt",
+    "type": "henge",
+    "lat": 51.2005,
+    "lng": 11.8694,
+    "stone_count": null,
+    "diameter_m": 75.0,
+    "age_bp": 7000,
+    "alignments": [
+      { "event": "midwinter_sunrise", "confidence": "confirmed" },
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "kits-coty",
+    "name": "Kit's Coty House",
+    "country": "United Kingdom",
+    "region": "Kent",
+    "type": "dolmen",
+    "lat": 51.3282,
+    "lng": 0.534,
+    "stone_count": 4,
+    "diameter_m": null,
+    "age_bp": 5500,
+    "alignments": []
+  },
+  {
+    "id": "clava-cairns",
+    "name": "Balnuaran of Clava",
+    "country": "United Kingdom",
+    "region": "Inverness-shire",
+    "type": "passage_tomb",
+    "lat": 57.4777,
+    "lng": -4.0735,
+    "stone_count": 47,
+    "diameter_m": 18.0,
+    "age_bp": 4000,
+    "alignments": [
+      { "event": "midwinter_sunset", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "callanish-ii",
+    "name": "Callanish II",
+    "country": "United Kingdom",
+    "region": "Isle of Lewis",
+    "type": "stone_circle",
+    "lat": 58.184,
+    "lng": -6.724,
+    "stone_count": 5,
+    "diameter_m": 9.0,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "lunar_major_standstill", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "tomnaverie",
+    "name": "Tomnaverie Recumbent Stone Circle",
+    "country": "United Kingdom",
+    "region": "Aberdeenshire",
+    "type": "stone_circle",
+    "lat": 57.1826,
+    "lng": -2.8026,
+    "stone_count": 11,
+    "diameter_m": 18.0,
+    "age_bp": 4000,
+    "alignments": [
+      { "event": "lunar_minor_standstill", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "grey-wethers",
+    "name": "Grey Wethers",
+    "country": "United Kingdom",
+    "region": "Devon",
+    "type": "stone_circle",
+    "lat": 50.6479,
+    "lng": -3.8779,
+    "stone_count": 30,
+    "diameter_m": 33.0,
+    "age_bp": 4000,
+    "alignments": []
+  },
+  {
+    "id": "men-an-tol",
+    "name": "Mên-an-Tol",
+    "country": "United Kingdom",
+    "region": "Cornwall",
+    "type": "dolmen",
+    "lat": 50.1527,
+    "lng": -5.6048,
+    "stone_count": 4,
+    "diameter_m": null,
+    "age_bp": 4000,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "knocknarea",
+    "name": "Knocknarea",
+    "country": "Ireland",
+    "region": "County Sligo",
+    "type": "passage_tomb",
+    "lat": 54.2753,
+    "lng": -8.5607,
+    "stone_count": null,
+    "diameter_m": 55.0,
+    "age_bp": 5500,
+    "alignments": [
+      { "event": "equinox_sunset", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "lough-gur",
+    "name": "Grange Stone Circle",
+    "country": "Ireland",
+    "region": "County Limerick",
+    "type": "stone_circle",
+    "lat": 52.5148,
+    "lng": -8.5258,
+    "stone_count": 113,
+    "diameter_m": 46.0,
+    "age_bp": 4500,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "barnenez",
+    "name": "Barnenez",
+    "country": "France",
+    "region": "Brittany",
+    "type": "passage_tomb",
+    "lat": 48.6629,
+    "lng": -3.8922,
+    "stone_count": null,
+    "diameter_m": 72.0,
+    "age_bp": 6800,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "table-des-marchands",
+    "name": "Table des Marchands",
+    "country": "France",
+    "region": "Brittany",
+    "type": "dolmen",
+    "lat": 47.582,
+    "lng": -2.9538,
+    "stone_count": null,
+    "diameter_m": null,
+    "age_bp": 6500,
+    "alignments": [
+      { "event": "midwinter_sunrise", "confidence": "confirmed" }
+    ]
+  },
+  {
+    "id": "sunhoney",
+    "name": "Sunhoney Recumbent Stone Circle",
+    "country": "United Kingdom",
+    "region": "Aberdeenshire",
+    "type": "stone_circle",
+    "lat": 57.1918,
+    "lng": -2.5833,
+    "stone_count": 11,
+    "diameter_m": 24.0,
+    "age_bp": 4200,
+    "alignments": [
+      { "event": "lunar_major_standstill", "confidence": "probable" }
+    ]
+  },
+  {
+    "id": "lagatjar",
+    "name": "Lagatjar Alignments",
+    "country": "France",
+    "region": "Brittany",
+    "type": "alignment",
+    "lat": 48.2751,
+    "lng": -4.6879,
+    "stone_count": 65,
+    "diameter_m": null,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "brownshill",
+    "name": "Brownshill Dolmen",
+    "country": "Ireland",
+    "region": "County Carlow",
+    "type": "dolmen",
+    "lat": 52.8419,
+    "lng": -6.9024,
+    "stone_count": 4,
+    "diameter_m": null,
+    "age_bp": 5800,
+    "alignments": []
+  },
+  {
+    "id": "legananny",
+    "name": "Legananny Dolmen",
+    "country": "United Kingdom",
+    "region": "County Down",
+    "type": "dolmen",
+    "lat": 54.305,
+    "lng": -6.1,
+    "stone_count": 4,
+    "diameter_m": null,
+    "age_bp": 5000,
+    "alignments": []
+  },
+  {
+    "id": "temple-wood",
+    "name": "Temple Wood Stone Circle",
+    "country": "United Kingdom",
+    "region": "Argyll and Bute",
+    "type": "stone_circle",
+    "lat": 56.0849,
+    "lng": -5.4787,
+    "stone_count": 13,
+    "diameter_m": 13.0,
+    "age_bp": 5000,
+    "alignments": [
+      { "event": "lunar_minor_standstill", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "lundin-links",
+    "name": "Lundin Links Standing Stones",
+    "country": "United Kingdom",
+    "region": "Fife",
+    "type": "stone_circle",
+    "lat": 56.2085,
+    "lng": -2.9818,
+    "stone_count": 3,
+    "diameter_m": 17.0,
+    "age_bp": 4500,
+    "alignments": []
+  },
+  {
+    "id": "tregeseal",
+    "name": "Tregeseal Dancing Stones",
+    "country": "United Kingdom",
+    "region": "Cornwall",
+    "type": "stone_circle",
+    "lat": 50.1374,
+    "lng": -5.6535,
+    "stone_count": 19,
+    "diameter_m": 21.0,
+    "age_bp": 4000,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "nine-ladies",
+    "name": "Nine Ladies Stone Circle",
+    "country": "United Kingdom",
+    "region": "Derbyshire",
+    "type": "stone_circle",
+    "lat": 53.1854,
+    "lng": -1.6973,
+    "stone_count": 9,
+    "diameter_m": 11.0,
+    "age_bp": 4000,
+    "alignments": []
+  },
+  {
+    "id": "merrivale",
+    "name": "Merrivale Stone Rows",
+    "country": "United Kingdom",
+    "region": "Devon",
+    "type": "alignment",
+    "lat": 50.5516,
+    "lng": -4.0194,
+    "stone_count": 182,
+    "diameter_m": null,
+    "age_bp": 3800,
+    "alignments": [
+      { "event": "equinox_sunrise", "confidence": "proposed" }
+    ]
+  },
+  {
+    "id": "cueva-de-menga",
+    "name": "Cueva de Menga",
+    "country": "Spain",
+    "region": "Andalusia",
+    "type": "passage_tomb",
+    "lat": 37.0175,
+    "lng": -4.5467,
+    "stone_count": 11,
+    "diameter_m": 25.0,
+    "age_bp": 5700,
+    "alignments": [
+      { "event": "midsummer_sunrise", "confidence": "confirmed" }
+    ]
   }
 ]
