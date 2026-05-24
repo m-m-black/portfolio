@@ -1,27 +1,31 @@
-import { render } from '@testing-library/react'
-import { act } from 'react'
-import { vi } from 'vitest'
+import { render, fireEvent } from '@testing-library/react'
 import RunicScramble from './RunicScramble'
 
-const RUNE_RANGE = /^[ᚠ-᛿\s]+$/
+const HAS_RUNE = /[ᚠ-᛿]/
 
 describe('RunicScramble', () => {
-  afterEach(() => {
-    vi.useRealTimers()
-  })
-
-  it('resolves to the target text after animation completes', () => {
-    vi.useFakeTimers()
+  it('renders target text immediately on mount', () => {
     const { container } = render(<RunicScramble text="Morgan" />)
-    act(() => {
-      vi.advanceTimersByTime(4000)
-    })
     expect(container.textContent).toBe('Morgan')
   })
 
-  it('shows only runic characters or spaces before resolving', () => {
-    vi.useFakeTimers()
+  it('shows a runic character on hover', () => {
     const { container } = render(<RunicScramble text="AB" />)
-    expect(RUNE_RANGE.test(container.textContent ?? '')).toBe(true)
+    const slots = Array.from(container.querySelector('span')!.children) as HTMLElement[]
+
+    fireEvent.mouseEnter(slots[0])
+
+    expect(HAS_RUNE.test(slots[0].textContent ?? '')).toBe(true)
+    expect(slots[1].textContent).toBe('B')
+  })
+
+  it('reverts to original letter on mouse leave', () => {
+    const { container } = render(<RunicScramble text="AB" />)
+    const slots = Array.from(container.querySelector('span')!.children) as HTMLElement[]
+
+    fireEvent.mouseEnter(slots[0])
+    fireEvent.mouseLeave(slots[0])
+
+    expect(slots[0].textContent).toBe('A')
   })
 })
